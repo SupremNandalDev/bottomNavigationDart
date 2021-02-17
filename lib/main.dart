@@ -1,3 +1,6 @@
+import 'dart:html';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -27,6 +30,48 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class ImageView extends StatelessWidget {
+
+  final Function(File) onSelectImage;
+
+  const ImageView({Key key, this.onSelectImage}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+
+    onSelectImage(File());
+
+    return Container();
+  }
+}
+
+
+class SignupPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+
+          ImageView(
+            onSelectImage: (image){
+
+            },
+          ),
+          TextFIelds(
+
+          ),
+          Password(
+
+          )
+
+        ],
+      ),
+    );
+  }
+}
+
 
 class MyHomePage extends StatelessWidget {
 
